@@ -1,5 +1,5 @@
 from pathlib import Path
-from corsheader.default import default_headers
+from corsheaders.defaults import default_headers
 import os
 import environ
 

@@ -42,4 +42,4 @@ class Ticket(models.Model):
 
     class Meta:
         unique_together = [['passenger', 'creation_date']]
-        ordering = ('published',)
+        ordering = ('creation_date',)
