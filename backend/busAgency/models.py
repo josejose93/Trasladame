@@ -8,21 +8,26 @@ class UserBus(models.Model):
     class Meta:
         abstract = True
 
+
 class Passenger(UserBus):
     pass
 
+
 class Driver(UserBus):
     pass
+
 
 class Bus(models.Model):
     license_plate = models.CharField(max_length=10, null=False, unique=True)
     driver = models.OneToOneField(Driver, on_delete=models.CASCADE)
     seat_taken = models.IntegerField(default=0, null=False)
 
+
 class Seat(models.Model):
     number = models.IntegerField()
     bus = models.ForeignKey(Bus, on_delete=models.CASCADE)
     state = models.BooleanField(default=False, null=False)
+
 
 class Destination(models.Model):
     departure_place = models.CharField(max_length=20, null=False)
@@ -33,6 +38,7 @@ class Destination(models.Model):
 
     class Meta:
         unique_together = [['schedule', 'bus']]
+
 
 class Ticket(models.Model):
     passenger = models.ForeignKey(Passenger, on_delete=models.CASCADE)
