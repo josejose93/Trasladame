@@ -13,4 +13,6 @@ router.register('ticket', views.TicketViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('destination-passenger-average/', views.DestinationAveragePassengerApiView.as_view()),
+    path('buses-overflow/', views.BusesOverflowApiView.as_view()),
 ]

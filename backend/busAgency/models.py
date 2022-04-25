@@ -20,7 +20,6 @@ class Driver(UserBus):
 class Bus(models.Model):
     license_plate = models.CharField(max_length=10, null=False, unique=True)
     driver = models.OneToOneField(Driver, on_delete=models.CASCADE)
-    seat_taken = models.IntegerField(default=0, null=False)
 
 
 class Seat(models.Model):
@@ -35,6 +34,7 @@ class Destination(models.Model):
     duration = models.TimeField()
     schedule = models.DateTimeField(auto_now=False, auto_now_add=False, null=False)
     bus = models.ForeignKey(Bus, on_delete=models.CASCADE)
+    seat_taken = models.IntegerField(default=0, null=False)
 
     class Meta:
         unique_together = [['schedule', 'bus']]

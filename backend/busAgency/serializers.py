@@ -19,7 +19,7 @@ class BusSerializer(serializers.ModelSerializer):
 
   class Meta:
     model = Bus
-    fields = ('id', 'license_plate', 'driver', 'driver_id', 'seat_taken')
+    fields = ('id', 'license_plate', 'driver', 'driver_id')
     depth = 1
 
 
@@ -35,7 +35,7 @@ class DestinationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Destination
-        fields = ('id', 'departure_place', 'arrival_place', 'duration', 'schedule', 'bus', 'bus_id')
+        fields = ('id', 'departure_place', 'arrival_place', 'duration', 'schedule', 'bus', 'bus_id', 'seat_taken')
         depth = 2
 
 
@@ -43,7 +43,6 @@ class TicketSerializer(serializers.ModelSerializer):
     passenger_id = serializers.IntegerField(write_only=True)
     destination_id = serializers.IntegerField(write_only=True)
     seat_id = serializers.IntegerField(write_only=True)
-    creation_date = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", input_formats=["%Y-%m-%d %H:%M:%S"])
     
     class Meta:
         model = Ticket
