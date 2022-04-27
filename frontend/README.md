@@ -1,19 +1,26 @@
-# frontend
+# TRASLADAME frontend
 
-## Project setup
+## Configuración
+Primero nos ubicaremos en la carpeta raíz de frontend (carpeta frontend)
+```
+git clone https://github.com/josejose93/Trasladame.git
+cd Trasladame/frontend
+```
+una vez dentro instalaremos los paquetes necesarios para la aplicación con:
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+Luego corremos el servidor con:
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+Escogemos la siguiente url para abrir la aplicación:
 ```
-npm run build
+http://localhost:8080/
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Listo!!
