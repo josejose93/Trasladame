@@ -1,5 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+
+Vue.use(VueRouter)
 
 const routes = [
   {
@@ -8,22 +11,40 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: () => import('../views/Dashboard.vue')
+    path: '/pasajeros',
+    name: 'pasajeros',
+    component: () => import(/* webpackChunkName: "about" */ '../views/PassengerView.vue')
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/choferes',
+    name: 'choferes',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DriverView.vue')
+  },
+  {
+    path: '/trayectos',
+    name: 'trayectos',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DestinationView.vue')
+  },
+  {
+    path: '/buses',
+    name: 'buses',
+    component: () => import(/* webpackChunkName: "about" */ '../views/BusView.vue')
+  },
+  {
+    path: '/trayecto-pasajero',
+    name: 'trayectoPasajero',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DestinationPassengerView.vue')
+  },
+  {
+    path: '/buses-llenos',
+    name: 'busesLlenos',
+    component: () => import(/* webpackChunkName: "about" */ '../views/BusOverView.vue')
   }
 ]
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
 

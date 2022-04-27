@@ -3,7 +3,7 @@ from django.db import models
 class UserBus(models.Model):
     first_name = models.CharField(max_length=20, null=False)
     last_name = models.CharField(max_length=20, null=False)
-    dni = models.CharField(max_length=8, null=False)
+    dni = models.CharField(max_length=8, null=False, unique=True)
 
     class Meta:
         abstract = True
@@ -14,7 +14,7 @@ class Passenger(UserBus):
 
 
 class Driver(UserBus):
-    pass
+    is_working =models.BooleanField(default=False, null=False) 
 
 
 class Bus(models.Model):

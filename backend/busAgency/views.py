@@ -29,6 +29,10 @@ class BusViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
+
+        driver = Driver.objects.get(id=request.data['driver_id'])
+        driver.is_working = True
+        driver.save()
         
         for i in range(10):
             Seat.objects.create(
