@@ -15,7 +15,7 @@ cd Trasladame
 crearemos un ambiente virtual, ASEGUREMONOS DE TENER INSTALADO VENV (VIRTUAL ENVIRONMENT) PARA ESTO
 
 ```
-python3 -m venv trasladame-env
+python -m venv trasladame-env
 ```
 Entramos al ambiente virtual
 ```
