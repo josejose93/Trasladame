@@ -35,7 +35,7 @@ class DestinationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Destination
-        fields = ('id', 'departure_place', 'arrival_place', 'duration', 'schedule', 'bus', 'bus_id', 'seat_taken')
+        fields = ('id', 'departure_place', 'arrival_place', 'schedule', 'bus', 'bus_id', 'seat_taken')
         depth = 2
 
 

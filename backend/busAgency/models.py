@@ -31,7 +31,6 @@ class Seat(models.Model):
 class Destination(models.Model):
     departure_place = models.CharField(max_length=20, null=False)
     arrival_place = models.CharField(max_length=20, null=False)
-    duration = models.TimeField()
     schedule = models.DateTimeField(auto_now=False, auto_now_add=False, null=False)
     bus = models.ForeignKey(Bus, on_delete=models.CASCADE)
     seat_taken = models.IntegerField(default=0, null=False)

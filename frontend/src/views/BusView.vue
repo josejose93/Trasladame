@@ -131,7 +131,7 @@ export default {
       license_plate: null,
       driver: null,
     },
-    defaultPassenger: {
+    defaultBus: {
       id: null,
       license_plate: null,
       driver: null,
@@ -276,8 +276,10 @@ export default {
     },
 
     deleteItem(item) {
-      this.editedIndex = this.buses.indexOf(item);
-      this.currentBus = { ...item };
+      this.editedIndex = this.busesFinales.indexOf(item);
+      this.currentBus = this.buses.find(
+        (b) => b.id === this.busesFinales[this.editedIndex].id
+      );
       this.dialogDelete = true;
     },
 
@@ -290,7 +292,7 @@ export default {
       this.dialog = false;
       this.resetForm();
       this.$nextTick(() => {
-        this.currentBus = { ...this.defaultPassenger };
+        this.currentBus = { ...this.defaultBus };
         this.editedIndex = -1;
       });
     },
@@ -298,7 +300,7 @@ export default {
     closeDelete() {
       this.dialogDelete = false;
       this.$nextTick(() => {
-        this.currentBus = { ...this.defaultPassenger };
+        this.currentBus = { ...this.defaultBus };
         this.editedIndex = -1;
       });
     },
