@@ -325,13 +325,11 @@ export default {
         .filter((t) => t.destination.id === destination)
         .map((t) => t.seat.number);
       if (seatsNumbers.length === 0) return [];
-
       const res = [];
       for (let i = 1; i < 11; i++) {
         const findSeat = seatsNumbers.find((n) => n === i);
         if (!findSeat) res.push({ text: `Asiento Número ${i}`, value: i });
       }
-
       return res;
     },
 
