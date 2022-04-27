@@ -6,7 +6,12 @@ Primero debemos clonar o descargar el repositorio
 git clone https://github.com/josejose93/Trasladame.git
 ```
 
-Una vez clonado, dentro de la carpeta del repo (Trasladame), crearemos un ambiente virtual, ASEGUREMONOS DE TENER INSTALADO VENV (VIRTUAL ENVIRONMENT) PARA ESTO
+Una vez clonado, dentro de la carpeta del repo (Trasladame),
+```
+cd Trasladame
+```
+
+crearemos un ambiente virtual, ASEGUREMONOS DE TENER INSTALADO VENV (VIRTUAL ENVIRONMENT) PARA ESTO
 
 ```
 python3 -m venv trasladame-env
