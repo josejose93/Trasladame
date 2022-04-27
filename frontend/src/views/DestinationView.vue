@@ -274,20 +274,19 @@ export default {
         });
     },
 
-    createDestination(trayecto) {
-      // getAPI
-      //   .post("/api/trayecto/", trayecto)
-      //   .then(() => {
-      //     console.log("created trayecto");
-      //     this.getDestinations();
-      //     this.newDestination = {};
-      //     this.resetForm();
-      //     this.close();
-      //   })
-      //   .catch((err) => {
-      //     console.log(err);
-      //   });
-      console.log(this.scheduleDateForm);
+    createDestination(destination) {
+      getAPI
+        .post("/api/destination/", destination)
+        .then(() => {
+          console.log("created destination");
+          this.getDestinations();
+          this.newDestination = {};
+          this.resetForm();
+          this.close();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
 
     updateDestination(destination) {
