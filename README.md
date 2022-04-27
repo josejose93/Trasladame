@@ -1,4 +1,5 @@
 # TRASLADAME
+![Screenshot](trasladame-home.jpeg)
 
 ## Configuración
 Primero debemos clonar o descargar el repositorio
