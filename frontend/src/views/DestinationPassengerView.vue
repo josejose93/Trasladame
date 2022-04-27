@@ -60,13 +60,11 @@ export default {
           this.destinations = response.data.results;
           this.destinationsFinal = this.destinations.map((d) => {
             const { passenger_average } = d;
-            console.log(passenger_average);
             return {
               ...d,
               passenger_average: `${passenger_average} pasajero(s)`,
             };
           });
-          console.log(this.destinationsFinal);
         })
         .catch((err) => {
           console.log(err);

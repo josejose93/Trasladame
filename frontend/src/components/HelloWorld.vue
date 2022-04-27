@@ -3,8 +3,8 @@
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
+          :src="require('../assets/destacame-logo.png')"
+          class="my-3 rounded-circle"
           contain
           height="200"
         />
@@ -12,16 +12,16 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
+          Bienvenido a TRASLADAME 
         </h1>
 
         <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
+          Plataforma para gestionar los viajes de una agencia de Buses
+          <br>Encuentra el repo completo en
           <a
-            href="https://community.vuetifyjs.com"
+            href="https://github.com/josejose93/Trasladame"
             target="_blank"
-          >Discord Community</a>
+          >GitHub</a>
         </p>
       </v-col>
 
@@ -30,12 +30,12 @@
         cols="12"
       >
         <h2 class="headline font-weight-bold mb-3">
-          What's next?
+          Rutas de CRUD
         </h2>
 
         <v-row justify="center">
           <a
-            v-for="(next, i) in whatsNext"
+            v-for="(next, i) in CRUDLinks"
             :key="i"
             :href="next.href"
             class="subheading mx-3"
@@ -51,12 +51,12 @@
         cols="12"
       >
         <h2 class="headline font-weight-bold mb-3">
-          Important Links
+          Funcionalidad Adicional
         </h2>
 
         <v-row justify="center">
           <a
-            v-for="(link, i) in importantLinks"
+            v-for="(link, i) in funcionalityAditional"
             :key="i"
             :href="link.href"
             class="subheading mx-3"
@@ -72,20 +72,8 @@
         cols="12"
       >
         <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
+          GRACIAS !!!
         </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
       </v-col>
     </v-row>
   </v-container>
@@ -96,54 +84,32 @@
     name: 'HelloWorld',
 
     data: () => ({
-      ecosystem: [
+      funcionalityAditional: [
         {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
+          text: 'Lista de los trayectos junto a su promedio de pasajeros',
+          href: 'http://localhost:8080/trayecto-pasajero',
         },
         {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
+          text: 'Filtro de todos los buses de un trayecto con más del N % de su capacidad vendida',
+          href: 'http://localhost:8080/buses-llenos',
         },
       ],
-      importantLinks: [
+      CRUDLinks: [
         {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
+          text: 'CRUD Pasajeros',
+          href: 'http://localhost:8080/pasajeros',
         },
         {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
+          text: 'CRUD Choferes',
+          href: 'http://localhost:8080/choferes',
         },
         {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
+          text: 'CRUD Trayectos',
+          href: 'http://localhost:8080/trayectos',
         },
         {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
+          text: 'CRUD Buses',
+          href: 'http://localhost:8080/buses',
         },
       ],
     }),
