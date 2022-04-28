@@ -51,6 +51,7 @@ export default {
         { title: "Choferes", icon: "mdi-forum", path: "/choferes" },
         { title: "Buses", icon: "mdi-forum", path: "/buses" },
         { title: "Trayectos", icon: "mdi-forum", path: "/trayectos" },
+        { title: "Tickets", icon: "mdi-forum", path: "/tickets" },
         { title: "Buses Full", icon: "mdi-forum", path: "/buses-llenos" },
         {
           title: "Promedio de Pasajeros",

@@ -86,6 +86,10 @@
     data: () => ({
       funcionalityAditional: [
         {
+          text: 'Crea tickets(pasajes) para pasajeros',
+          href: 'http://localhost:8080/tickets',
+        },
+        {
           text: 'Lista de los trayectos junto a su promedio de pasajeros',
           href: 'http://localhost:8080/trayecto-pasajero',
         },
