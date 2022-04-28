@@ -11,8 +11,8 @@ Una vez clonado, dentro de la carpeta del repo (Trasladame),
 ```
 cd Trasladame
 ```
-
-crearemos un ambiente virtual, ASEGUREMONOS DE TENER INSTALADO VENV (VIRTUAL ENVIRONMENT) PARA ESTO
+ 
+crearemos un ambiente virtual, ASEGUREMONOS DE TENER INSTALADO VENV (VIRTUAL ENVIRONMENT) PARA ESTO, en la consola (y siempre que necesitemos de python en la consola, llamaremos a python como "python" o "python3", en mi caso, usaremos "python"
 
 ```
 python -m venv trasladame-env
