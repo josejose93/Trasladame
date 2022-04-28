@@ -32,13 +32,13 @@ cd ..
 Ahora como último paso haremos las migraciones de la base de datos
 
 ```
-python manage makemigrations
-python manage migrate
+python manage.py makemigrations
+python manage.py migrate
 ```
 
 Ya estamos listos para correr nuestro servido backend !!!
 ```
-python manage runserver
+python manage.py runserver
 ```
 
 Abrimos otra terminal en la que configuraremos el servidor frontend, continuaremos los siguientes pasos aquí: [frontend](https://github.com/josejose93/Trasladame/tree/main/frontend)
